@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MAIN PAGE</title>
+</head>
+<body>
+<table style="width:400px" class="container" align="center">
+    <form th:method="PATCH" th:action="@{/users/{id}(id=${user.getId()})}" th:object="${user}">
+        <tr>
+            <th><label for="name">Enter NAME: </label></th>
+            <th><input type="text" th:field="*{name}" id="name" placeholder="name"></th>
+        </tr>
+        <tr>
+            <th><label for="name">Enter LASTNAME: </label></th>
+            <th><input type="text" th:field="*{lastName}" id="lastName" placeholder="lastName"></th>
+        </tr>
+        <tr>
+            <th><label for="name">Enter AGE: </label></th>
+            <th><input type="text" th:field="*{age}" id="age" placeholder="age"></th>
+        </tr>
+        <tr>
+            <th><label for="salary">Enter SALARY(rub): </label></th>
+            <th><input type="text" th:field="*{salary}" id="salary" placeholder="salary"></th>
+        </tr>
+        <tr>
+            <th></th>
+            <th><input type="submit" value="UPDATE"></th>
+        </tr>
+    </form>
+</table>
+<p></p>
+<center><a href="/users">MAIN PAGE</a></center>
+</body>
+</html>
